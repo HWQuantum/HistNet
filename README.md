@@ -23,7 +23,7 @@ The datasets used for the paper are saved in ./Training_Dataset/Dataset/ under t
 
 ### Steps
  
-Training Data is created from the MPI dataset [1]. This dataset is composed 23 RGB-D images of size 436x1024 of the MPI dataset. Median filtering was used to get rid of outliers values (see ./Training_Dataset/Codes/fill_MPI_Sintel_depth.m). The clean depth and intensity images are saved in './Training_Dataset/Raw_data_Middlebury_MPI'. 
+Training Data is created from the MPI dataset [1,2]. This dataset is composed 23 RGB-D images of size 436x1024 of the MPI dataset. Median filtering was used to get rid of outliers values (see ./Training_Dataset/Codes/fill_MPI_Sintel_depth.m). The clean depth and intensity images are saved in './Training_Dataset/Raw_data_Middlebury_MPI'. 
 
 1. Edit the noise levels (ppp and SBR) in './Training_Dataset/Codes/main_creation_dataset.py'.
 (The realistic scenario of the paper corresponds to ppp=1200 and SBR=2. The extreme scenario corresponds to ppp=4 and SBR=0.02.)
@@ -50,7 +50,7 @@ This command is for running the 'realistic' noise scenario.
 
 
 ## 3. Evaluation on Simulated Middlebury Dataset
-Scenes from the Middlebury Stereo dataset [2,3] were filtered with Median filtering and saved in './Simulate_data/RAW'. 
+Scenes from the Middlebury Stereo dataset [3,4] were filtered with Median filtering and saved in './Simulate_data/RAW'. 
 
 ### Steps
 
@@ -96,7 +96,7 @@ python3 ./Codes/main_hist.py
 
 ### Commentary 
 
-The raw data captured by the SPAD is in ./real_data/*data_type*/RAW with *data_type* being either hammer or juggling. The code create_test_real.py computes the input of HistNet from these raw data which appear in a folder called DATA_TEST in  ./real_data/*data_type*/. The code  main_hist.py will compute the reconstruction and save them the Matlab file parameters.mat in result_path.
+The raw data captured by the SPAD is in ./real_data/*data_type*/RAW with *data_type* being either hammer or juggling [5]. The code create_test_real.py computes the input of HistNet from these raw data which appear in a folder called DATA_TEST in  ./real_data/*data_type*/. The code  main_hist.py will compute the reconstruction and save them the Matlab file parameters.mat in result_path.
 
 Example: To reconstruct frame 9 of the hammer data, run :
 
@@ -105,9 +105,15 @@ python3 ./Codes/main_hist.py --data_path='./Real_Data/Hammer/DATA_TEST_frame_9' 
 ```
 
 ## References 
-[1]
-[2] D. Scharstein and C. Pal. Learning conditional random fields for stereo.
+
+[1] D. J. Butler, J. Wulff, G. B. Stanley, and M. J. Black, “A naturalistic open source movie for optical flow evaluation,” in European Conf. on Computer Vision(ECCV),A. Fitzgibbon et al. (Eds.), ed. (Springer-Verlag, 2012), Part IV, LNCS 7577, pp. 611–625.
+
+[2]J. Wulff, D. J. Butler, G. B. Stanley, and M. J. Black, “Lessons and insights from creating a synthetic optical flow benchmark,” inECCV Workshop onUnsolved Problems in Optical Flow and Stereo Estimation,A. Fusiello et al. (Eds.), ed. (Springer-Verlag, 2012), Part II, LNCS 7584, pp. 168–177.
+
+[3] D. Scharstein and C. Pal. Learning conditional random fields for stereo.
 In IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR 2007), Minneapolis, MN, June 2007.
 
-[3] H. Hirschmüller and D. Scharstein. Evaluation of cost functions for stereo matching.
+[4] H. Hirschmüller and D. Scharstein. Evaluation of cost functions for stereo matching.
 In IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR 2007), Minneapolis, MN, June 2007.
+
+[5] I. Gyongy, S. W. Hutchings, A. Halimi, M. Tyler, S. Chan, F. Zhu, S. McLaughlin, R. K. Henderson, and J. Leach, “High-speed 3D sensing via hybrid-modeimaging and guided upsampling,” Optica (2020)
