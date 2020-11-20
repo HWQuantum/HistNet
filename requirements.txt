@@ -1,0 +1,4 @@
+tensorflow==2.1.0
+scipy==1.4.1
+numpy==1.18.2
+Pytho 3.6.9
