@@ -24,7 +24,7 @@ This document is structured as follows
  
 Training Data is created from the MPI dataset [1,2]. This dataset is composed 23 RGB-D images of size 436x1024 of the MPI dataset. Median filtering was used to get rid of outliers values (see ./Training_Dataset/Codes/fill_MPI_Sintel_depth.m). The clean depth and intensity images are saved in './Training_Dataset/Raw_data_Middlebury_MPI'.  
 
-1. Edit the noise levels (ppp and SBR) in './Training_Dataset/Codes/main_creation_dataset.py'.
+1. Edit the noise levels (ppp and SBR) in './Training_Dataset/main_creation_dataset.py'.
 (The realistic scenario of the paper corresponds to ppp=1200 and SBR=2. The extreme scenario corresponds to ppp=4 and SBR=0.02.)
 
 2. Run 
