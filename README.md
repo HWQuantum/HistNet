@@ -5,7 +5,9 @@
 Contact: Alice Ruget - ar432@hw.ac.uk
 
 Download the complete folder at 
-<https://researchportal.hw.ac.uk/en/datasets/dataset-for-robust-super-resolution-depth-imaging-via-a-multi-fea>
+<https://researchportal.hw.ac.uk/en/datasets/dataset-for-robust-super-resolution-depth-imaging-via-a-multi-fea>. 
+
+
 This folder contains the code implementation and trained models used for the
 project. The following describes how to generate training data and perform the
 training, evaluation on the Middlebury test dataset, and evaluation on the
