@@ -56,7 +56,7 @@ python3 ./Codes_Network/main_hist.py
 ### Example 
 For example, to run the training for the 'realistic' noise scenario:
 ```python
-python3 ./Codes_Network/main_hist.py --data_path='./Training_Dataset/Dataset/DATA_intensity_1200_SBR_2' --is_train='1' --config='./Config/config.yaml' --checkpoint_dir='./Checkpoint/Checkpoint_ppp1200_SBR2' --result_path='/Results_Training/ppp1200_SBR2' --save_parameters='1' --loss_type='l1' --optimizer_type='Proximal'
+python3 ./Codes_Network/main_hist.py --data_path='./Training_Dataset/Dataset/DATA_intensity_1200_SBR_2' --is_train='1' --config='./Config/config.yaml' --checkpoint_dir='./Checkpoint/Checkpoint_ppp1200_SBR2' --result_path='./Results_Training/ppp1200_SBR2' --save_parameters='1' --loss_type='l1' --optimizer_type='Proximal'
 ```
 
 
