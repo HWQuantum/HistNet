@@ -1,0 +1,13 @@
+# Configuration for experiment. 
+
+---
+batch_size : 64 #integer
+image_size : 96 #integer
+label_size : 96 #integer
+learning_rate : 1e-4 #float
+c_dim : 1 #integer
+h0 : 230 #integer
+w0 : 310 #integer
+scale : 4 #integer
+stride : 48 #integer
+save_parameters : 1
